@@ -20,3 +20,20 @@ The unique identifier of the event.
 {% docs bingeflix_column_subscription_plan_id %}
 The unique identifier of the subscription plan.
 {% enddocs %}
+
+{% docs table_events %}
+This table contains information about the behavioral events of users while they interact with the Bingeflix platform.
+{% enddocs %}
+
+{% docs table_subscription_plans %}
+This table contains information about various subscription plans available on Bingeflix.
+{% enddocs %}
+
+
+{% docs table_subscriptions %}
+This model contains information about Bingeflix subscriptions.
+{% enddocs %}
+
+{% docs table_users %}
+"This is table contains information about Bingeflix users."
+{% enddocs %}
