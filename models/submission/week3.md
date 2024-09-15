@@ -17,3 +17,12 @@ I deleted the generic tests found in the following files:
 I only kept in `dim_users.yml` the new generic tests that are not present in:
 - `stg_bingeflix_users.yml`
 - `source_bingeflix.yml`
+
+### task 2
+
+1- Review the singular test assert_valid_event_name.sql below:
+-- We have an issue with some test events appearing in our data source that we want to be notified about
+-- This returns records where the event name contains 'test'
+
+SELECT * FROM {{ ref ('stg_bingeflix__events') }}
+WHERE lower(event_name) not LIKE '%test%'
