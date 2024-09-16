@@ -1,3 +1,4 @@
+<!-- trunk-ignore-all(prettier) -->
 #### Week 3 Submission
 
 ### task 1
@@ -26,3 +27,8 @@ I only kept in `dim_users.yml` the new generic tests that are not present in:
 
 SELECT * FROM {{ ref ('stg_bingeflix__events') }}
 WHERE lower(event_name) not LIKE '%test%'
+
+
+### Task 3
+
+1. To apply unit tests, you can use the `current_age` or `age_at_acquisition` column in the `dim_users` model because it is a common use case for unit testing.
