@@ -1,6 +1,19 @@
+{{
+    config(
+        materialized='incremental',
+        unique_key='event_id'
+    )
+}}
+
 WITH source AS (
 
     SELECT * FROM {{ source('bingeflix', 'events') }}
+
+{% if is_incremental() %}
+
+  WHERE created_at >= (SELECT dateadd('day' , -3, max(created_at)) FROM {{ this }})
+
+{% endif %}
 
 ),
 
